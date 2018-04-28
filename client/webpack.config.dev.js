@@ -10,9 +10,15 @@ module.exports = {
 	context,
 
 	entry: {
+		// frontend: [
+		// 	'babel-polyfill',
+		// 	path.resolve(__dirname, './src/index.jsx'),
+		// ],
+
 		frontend: [
 			'babel-polyfill',
-			path.resolve(__dirname, './src/index.jsx'),
+			// path.resolve(__dirname, './src/index.ts.jsx'),
+			path.resolve(__dirname, './src/index.tsx'),
 		],
 	},
 
@@ -29,7 +35,7 @@ module.exports = {
 		],
 
 		// Settings so filename extension isn't required when importing.
-		extensions: ['.js', '.jsx'],
+		extensions: ['.js', '.jsx', '.ts', '.tsx'],
 	},
 
 	plugins: [
@@ -71,7 +77,7 @@ module.exports = {
 		rules: [
 			// Javascript
 			{
-				test: /\.(js|jsx)$/,
+				test: /\.(js|jsx|ts|tsx)$/,
 				exclude: [
 					/node_modules/,
 				],

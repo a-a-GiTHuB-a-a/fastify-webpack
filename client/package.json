@@ -9,17 +9,19 @@
 		"clean": "rm -rf ./dist",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"jest": "./node_modules/.bin/jest",
-		"flow": "./node_modules/.bin/flow",
-		"lint": "./node_modules/.bin/eslint --ext .js,.jsx ./src/ --quiet"
+		"lint": "./node_modules/.bin/eslint --ext .js,.jsx,.ts,.tsx ./src/ --quiet"
 	},
+	"type-check": "tsc",
 	"author": "@tsnieman",
 	"license": "UNLICENSED",
 	"dependencies": {
 		"@babel/core": "^7.0.0-beta.46",
 		"@babel/plugin-proposal-class-properties": "^7.0.0-beta.46",
 		"@babel/preset-env": "^7.0.0-beta.46",
-		"@babel/preset-flow": "^7.0.0-beta.46",
 		"@babel/preset-react": "^7.0.0-beta.46",
+		"@babel/preset-typescript": "^7.0.0-beta.46",
+		"@types/react": "^16.3.13",
+		"@types/react-dom": "^16.0.5",
 		"babel-core": "^7.0.0-bridge.0",
 		"babel-eslint": "^8.2.3",
 		"babel-jest": "^23.0.0-beta.2",
@@ -31,11 +33,9 @@
 		"eslint": "^4.19.1",
 		"eslint-config-airbnb": "^16.1.0",
 		"eslint-import-resolver-webpack": "^0.9.0",
-		"eslint-plugin-flowtype": "^2.46.2",
 		"eslint-plugin-import": "^2.11.0",
 		"eslint-plugin-jsx-a11y": "^6.0.3",
 		"eslint-plugin-react": "^7.7.0",
-		"flow-bin": "^0.71.0",
 		"html-webpack-plugin": "^3.2.0",
 		"jest": "^22.4.3",
 		"mini-css-extract-plugin": "^0.4.0",
@@ -57,5 +57,11 @@
 		"webpack": "^4.5.0",
 		"webpack-bundle-analyzer": "^2.11.1",
 		"webpack-cli": "^2.0.14"
+	},
+	"devDependencies": {
+		"@babel/node": "^7.0.0-beta.46",
+		"eslint-plugin-typescript": "^0.12.0",
+		"typescript": "^2.8.3",
+		"typescript-eslint-parser": "^15.0.0"
 	}
 }

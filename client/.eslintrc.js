@@ -1,16 +1,30 @@
 module.exports = {
   "parser": "babel-eslint",
+	// "parser": "typescript-eslint-parser", // I think this is a pre-babel 7 thing?
+  "parserOptions": {
+    "typescript": true
+  },
   "extends": [
-    "plugin:flowtype/recommended",
     "airbnb"
   ],
   "plugins": [
-    "flowtype",
+    "typescript",
     "react",
     "jsx-a11y",
     "import"
   ],
   "settings": {
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "ts": "never",
+        "tsx": "never",
+      }
+    ],
+    "import/parsers": {
+      "typescript-eslint-parser": [".ts", ".tsx"]
+    },
     "import/resolver": {
       "webpack": {
         "config": "./webpack.config.js",
@@ -25,8 +39,9 @@ module.exports = {
     "indent": ["error", "tab"],
     "react/jsx-indent": [2, 'tab'],
     "react/jsx-indent-props": [2, 'tab'],
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }]
   },
-	"env": {
-		"browser": true,
-	},
+  "env": {
+    "browser": true,
+  },
 };

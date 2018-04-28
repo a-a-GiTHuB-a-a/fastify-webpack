@@ -1,4 +1,3 @@
-/* @flow */
 import * as React from 'react'; // importing as a namespace gives access to React's utility types
 import './AppRoot.module.css';
 import '../styles/normalize.global.css';

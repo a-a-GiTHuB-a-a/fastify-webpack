@@ -1,5 +1,4 @@
 /* global document */
-/* @flow */
 import * as React from 'react'; // importing as a namespace gives access to React's utility types
 import { render as renderReactToDOM } from 'react-dom';
 
